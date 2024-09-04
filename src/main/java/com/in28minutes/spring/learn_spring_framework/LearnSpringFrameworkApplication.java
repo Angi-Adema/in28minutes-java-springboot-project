@@ -23,8 +23,7 @@ public class LearnSpringFrameworkApplication {
 		GameRunner runner = new GameRunner(game);  // 2 Pass it to the game runner.
 		
 		runner.run();  // Game runner will be able to run the game.
-		//asdkjasd
-		//asdkasldkjasldkjalskdj
+
 		 
 	}
 
