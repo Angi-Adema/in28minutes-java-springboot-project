@@ -1,17 +1,15 @@
 package com.in28minutes.spring.learn_spring_framework;
 
 import org.springframework.boot.SpringApplication;
-
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.in28minutes.spring.learn_spring_framework.enterprise.example.web.MyWebController;
 import com.in28minutes.spring.learn_spring_framework.game.GameRunner;
-import com.in28minutes.spring.learn_spring_framework.game.MarioGame;
-import com.in28minutes.spring.learn_spring_framework.game.PacManGame;
-import com.in28minutes.spring.learn_spring_framework.game.SuperContraGame;
-import com.in28minutes.spring.learn_spring_framework.game.GamingConsole;
 
-@SpringBootApplication
+@SpringBootApplication   // Automatically does a component scan on the current package.
+//@ComponentScan("com.in28minutes.spring.learn_spring_framework")
+//@ComponentScan({"com.package1", "com.package2"})   // For scanning multiple packages.
 public class LearnSpringFrameworkApplication {
 
 	public static void main(String[] args) {
@@ -29,8 +27,10 @@ public class LearnSpringFrameworkApplication {
 		
 		// An instance of a component is a bean. What bean do we want? We want an instance of the GameRunner class.
 		GameRunner runner = context.getBean(GameRunner.class);
-		
 		runner.run();  // Game runner will be able to run the game.
+		
+		MyWebController controller = context.getBean(MyWebController.class);
+		System.out.println(controller.returnValueFromBusinessService());
 
 		 
 	}
