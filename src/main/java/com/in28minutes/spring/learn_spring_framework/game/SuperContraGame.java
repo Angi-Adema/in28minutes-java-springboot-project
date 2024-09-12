@@ -1,6 +1,10 @@
 package com.in28minutes.spring.learn_spring_framework.game;
 
-//@Component
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component  // If all the games have active Component at once, will get error. Here we state this game is primary to eliminate error.
+@Primary  // Use Primary to define what you want to autowire.
 public class SuperContraGame implements GamingConsole {
 	
 	public void up() {

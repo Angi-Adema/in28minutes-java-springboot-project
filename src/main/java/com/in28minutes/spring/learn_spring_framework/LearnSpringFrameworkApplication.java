@@ -17,7 +17,7 @@ public class LearnSpringFrameworkApplication {
 //		MarioGame game = new MarioGame();  // Create a game.
 //		SuperContraGame game = new SuperContraGame();
 		
-		// How can we use Spring framework to create these instead? Line 19 creates these for us.
+		// How can we use Spring framework to create the GamingConsole and GameRunner instead? Line 26 creates these for us.
 		// Spring is managing the creation of these objects. When Spring manages the creation of objects and creates instances of them, we call them beans.
 		// Spring manages all our beans.
 //		GamingConsole game = new MarioGame();  // 1
