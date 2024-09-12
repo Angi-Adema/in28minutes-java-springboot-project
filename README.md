@@ -10,4 +10,4 @@ build the project including Maven and how this simplifies dependencies needed fo
 
 - Java 17
 - Maven
-- Spring Boot
+- Spring Boot# learn-jpa-and-hibernate
